@@ -71,7 +71,7 @@
       <EchoCommandLines           Condition="'%(Link.EchoCommandLines)'               == ''">false</EchoCommandLines>
 
       <AdditionalDependencies     Condition="'%(Link.AdditionalDependencies)'         == ''"></AdditionalDependencies>
-      <IgnoreAllDefaultLibraries  Condition="'%(Link.IgnoreAllDefaultLibraries)'      == ''">true</IgnoreAllDefaultLibraries>
+      <IgnoreAllDefaultLibraries  Condition="'%(Link.IgnoreAllDefaultLibraries)'      == ''">false</IgnoreAllDefaultLibraries>
       <NaClSystemLibs             Condition="'%(Link.NaClSystemLibs)'                 == ''">c;m;log;gcc</NaClSystemLibs>
 
       <SoName                     Condition="'%(Link.SoName)'                         == ''">lib$(TargetName)</SoName>
