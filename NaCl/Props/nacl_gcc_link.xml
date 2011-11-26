@@ -64,8 +64,6 @@
   </StringProperty>
   <StringProperty Subtype="folder" Name="SysRootDir" Category="General" Visible="false" Switch="-sysroot=">
   </StringProperty>
-  <StringListProperty Subtype="file" Name="StlLibs" Category="General" Visible="false">
-  </StringListProperty>
 
   <!-- Command Line -->
   <StringProperty Name="AdditionalOptions" DisplayName="Additional Options" Description="Additional Options" Category="Command Line">

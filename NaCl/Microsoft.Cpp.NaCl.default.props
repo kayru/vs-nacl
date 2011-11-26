@@ -11,11 +11,10 @@
 
     <PlatformShortName>NaCl</PlatformShortName>
     <PlatformArchitecture>32</PlatformArchitecture>
-    <PlatformToolset    Condition="'$(PlatformToolset)' == ''">arm-linux-androideabi-4.4.3</PlatformToolset>
-    <AndroidAPILevel    Condition="'$(AndroidAPILevel)' == ''">android-9</AndroidAPILevel>
-    <AndroidArch        Condition="'$(AndroidArch)'     == ''">armv5te</AndroidArch>
-    <AndroidStlType     Condition="'$(AndroidStlType)'  == ''">gnustl_static</AndroidStlType>
-
+    
+    <PlatformToolset    Condition="'$(PlatformToolset)' == ''">win_x86</PlatformToolset>
+    <NaClArch           Condition="'$(NaClArch)'        == ''">i686</NaClArch>
+    
     <IntDir Condition="'$(IntDir)'=='' AND '$(IntermediateOutputPath)'!=''">$(IntermediateOutputPath)</IntDir>
     <IntDir Condition="'$(IntDir)'=='' AND '$(IntermediateOutputPath)'==''">$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(OutDir)'=='' AND '$(SolutionDir)' != ''">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>

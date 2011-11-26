@@ -1,0 +1,29 @@
+﻿<!--
+***********************************************************************************************
+(c) 2011 Gavin Pugh http://www.gavpugh.com/ - Released under the open-source zlib license
+***********************************************************************************************
+-->
+
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  
+  <PropertyGroup>
+    
+    <PlatformToolsetVersion>win_x86</PlatformToolsetVersion>
+    <PlatformShortName>win_x86</PlatformShortName>
+    
+    <ToolchainDir>$(NaClSDKRoot)\$(NaClTargetPlatform)\toolchain\$(PlatformToolsetVersion)</ToolchainDir>
+
+    <!-- Path to the GCC compilation tools -->
+    <GccToolsPath>$(ToolchainDir)\bin</GccToolsPath>
+
+    <!-- Path to the toolchain includes. Needed for Intellisense. -->
+    <GccToolchainIncludes>$(ToolchainDir)\x86_64-nacl\include</GccToolchainIncludes>
+
+    <!-- GCC compilation tool filenames -->
+    <GccCompiler>$(NaClArch)-nacl-g++.exe</GccCompiler>
+    <GccLinker>$(NaClArch)-nacl-g++.exe</GccLinker>
+    <GccLibrarian>$(NaClArch)-nacl-ar.exe</GccLibrarian>
+    
+  </PropertyGroup>
+
+</Project>

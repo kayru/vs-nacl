@@ -76,10 +76,6 @@
     <ProjectTools Include="Link"/>
     <ProjectTools Include="CustomBuildStep"/>
   </ItemGroup>
-
-  <ItemGroup Condition="('$(ConfigurationType)' == 'Application')">
-    <ProjectTools Include="AntBuild"/>
-  </ItemGroup>
   
   <!-- Tools that show up in the IDE property pages for lib project-->
   <ItemGroup Condition="'$(ConfigurationType)' == 'StaticLibrary'">

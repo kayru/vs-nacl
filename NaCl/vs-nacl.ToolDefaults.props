@@ -19,7 +19,6 @@
       <WarningsAsErrors         Condition="'%(ClCompile.WarningsAsErrors)'          == ''">false</WarningsAsErrors>
       <EchoCommandLines         Condition="'%(ClCompile.EchoCommandLines)'          == ''">false</EchoCommandLines>
 
-      <ThumbMode                Condition="'%(ClCompile.ThumbMode)'                 == ''">false</ThumbMode>
       <StrictAliasing           Condition="'%(ClCompile.StrictAliasing)'            == ''">false</StrictAliasing>
       <UnswitchLoops            Condition="'%(ClCompile.UnswitchLoops)'             == ''">true</UnswitchLoops>
       <InlineLimit              Condition="'%(ClCompile.InlineLimit)'               == ''">100</InlineLimit>
@@ -74,7 +73,6 @@
       <AdditionalDependencies     Condition="'%(Link.AdditionalDependencies)'         == ''"></AdditionalDependencies>
       <IgnoreAllDefaultLibraries  Condition="'%(Link.IgnoreAllDefaultLibraries)'      == ''">true</IgnoreAllDefaultLibraries>
       <NaClSystemLibs             Condition="'%(Link.NaClSystemLibs)'                 == ''">c;m;log;gcc</NaClSystemLibs>
-      <LinkGccLibThumb            Condition="'%(Link.LinkGccLibThumb)'                == ''">false</LinkGccLibThumb>
 
       <SoName                     Condition="'%(Link.SoName)'                         == ''">lib$(TargetName)</SoName>
       <ReportUndefinedSymbols     Condition="'%(Link.ReportUndefinedSymbols)'         == ''">true</ReportUndefinedSymbols>
@@ -82,8 +80,7 @@
       <GenerateSharedLibrary      Condition="'%(Link.GenerateSharedLibrary)'          == ''">true</GenerateSharedLibrary>
       <NoExecStack                Condition="'%(Link.NoExecStack)'                    == ''">true</NoExecStack>
       <RPathLink                  Condition="'%(Link.RPathLink)'                      == ''">$(NaClLibDir)</RPathLink>
-      <SysRootDir                 Condition="'%(Link.SysRootDir)'                     == ''">$(NaClLibDir)\..\..</SysRootDir>
-      <StlLibs                    Condition="'%(Link.StlLibs)'                        == ''">$(NaClStlLibs)</StlLibs>
+      <SysRootDir                 Condition="'%(Link.SysRootDir)'                     == ''"></SysRootDir> <!-- TODO -->
     
       <SystemLibraryDirectories	  Condition="'%(Link.SystemLibraryDirectories)'       == ''">$(LibraryPath)</SystemLibraryDirectories>
       
@@ -98,25 +95,6 @@
       <EchoCommandLines           Condition="'%(Lib.EchoCommandLines)'              == ''">false</EchoCommandLines>
       
     </Lib>
-  </ItemDefinitionGroup>
-
-  <!-- Ant Build defaults -->
-  <ItemDefinitionGroup>
-    <AntBuild>
-      
-      <AntBuildPath         Condition="'%(AntBuild.AntBuildPath)'         == ''">$(ProjectDir)</AntBuildPath>
-      <AntLibraryName       Condition="'%(AntBuild.AntLibraryName)'       == ''">lib$(TargetName)</AntLibraryName>
-      <AntBuildType         Condition="'%(AntBuild.AntBuildType)'         == '' and '$(Configuration)' == 'Debug'">Debug</AntBuildType>
-      <AntBuildType         Condition="'%(AntBuild.AntBuildType)'         == '' and '$(Configuration)' != 'Debug'">Release</AntBuildType>
-      <AntDeploy            Condition="'%(AntBuild.AntDeploy)'            == ''">DeployAndRun</AntDeploy>
-      <JVMHeapInitial       Condition="'%(AntBuild.JVMHeapInitial)'       == ''"></JVMHeapInitial>
-      <JVMHeapMaximum       Condition="'%(AntBuild.JVMHeapMaximum)'       == ''"></JVMHeapMaximum>
-      <AdbDeployAddCmdLine  Condition="'%(AntBuild.AdbDeployAddCmdLine)'  == ''"></AdbDeployAddCmdLine>
-      <AdbRunAddCmdLine     Condition="'%(AntBuild.AdbRunAddCmdLine)'     == ''"></AdbRunAddCmdLine>
-
-      <TrackerLogDirectory  Condition="'%(AntBuild.TrackerLogDirectory)'  == ''">$(IntDir)</TrackerLogDirectory>
-
-    </AntBuild>
   </ItemDefinitionGroup>
 
 </Project>

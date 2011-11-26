@@ -42,7 +42,7 @@
 
   <PropertyGroup Condition="'$(ConfigurationType)' == 'Application'">
     <LinkCompiled>true</LinkCompiled>
-    <TargetExt>.so</TargetExt>
+    <TargetExt>.nexe</TargetExt>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(ConfigurationType)' == 'DynamicLibrary'">
