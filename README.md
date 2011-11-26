@@ -2,8 +2,8 @@ Native Client Platform for Visual Studio 2010
 =============================================
 
 This adds native support for building NaCl executables to Visual Studio 2010 by integrating NaCl SDK GCC tool-chain into MSBuild system.
-It is basically a hacked version of [vs-android](http://code.google.com/p/vs-android/). 
-All credit goes to Gavin Pugh for making this possible.
+It is basically a hacked version of [vs-android](http://code.google.com/p/vs-android/).
+Giant thanks to Gavin Pugh for making this possible.
 
 How to install
 ==============

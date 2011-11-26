@@ -1,0 +1,57 @@
+﻿<!--
+***********************************************************************************************
+(c) 2011 Gavin Pugh http://www.gavpugh.com/ - Released under the open-source zlib license
+***********************************************************************************************
+-->
+
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(VCTargetsPath)\Platforms\NaCl\ImportBefore\*.props" Condition="Exists('$(VCTargetsPath)\Platforms\NaCl\ImportBefore')" />
+
+  <!-- Bring in defaults for envvars we need -->
+  <Import Project="$(VCTargetsPath)\Platforms\NaCl\vs-nacl.EnvVars.props" />
+  
+  <!-- Bring in toolset props afterwards, since it's dependent on the envvars -->
+  <Import Condition="(exists('$(VCTargetsPath)\Platforms\NaCl\PlatformToolsets\$(PlatformToolset)\Microsoft.Cpp.NaCl.$(PlatformToolset).props'))" Project="$(VCTargetsPath)\Platforms\NaCl\PlatformToolsets\$(PlatformToolset)\Microsoft.Cpp.NaCl.$(PlatformToolset).props"/>
+    
+  <!-- Debugger -->
+  <PropertyGroup>
+    <DebuggerFlavor Condition="'$(DebuggerFlavor)'==''">WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+
+  <!-- Bring in correct tool paths -->
+  <Import Project="$(VCTargetsPath)\Platforms\NaCl\vs-nacl.ToolPaths.props" />
+
+  <!-- Default preprocessor defines -->
+  <PropertyGroup>
+    <ArchDefines Condition="'$(NaClArch)' == 'x86_32'">;</ArchDefines>
+    <ArchDefines Condition="'$(NaClArch)' == 'x86_64'">;</ArchDefines>
+    <NaClDefines>$(ArchDefines);</NaClDefines>
+  </PropertyGroup>
+  
+  <!-- Couple of things to disable that we don't need for NaCl -->
+  <PropertyGroup>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <GenerateManifest>false</GenerateManifest>  
+  </PropertyGroup>
+
+  <!-- Settings specific to each build type -->
+  <PropertyGroup Condition="'$(ConfigurationType)' == 'StaticLibrary'">
+    <LibCompiled>true</LibCompiled>
+    <TargetExt>.a</TargetExt>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(ConfigurationType)' == 'Application'">
+    <LinkCompiled>true</LinkCompiled>
+    <TargetExt>.so</TargetExt>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(ConfigurationType)' == 'DynamicLibrary'">
+    <LinkCompiled>true</LinkCompiled>
+    <TargetExt>.so</TargetExt>
+  </PropertyGroup>
+
+  <!-- Bring in default props for each tool -->
+  <Import Project="$(VCTargetsPath)\Platforms\NaCl\vs-nacl.ToolDefaults.props" />
+
+  <Import Project="$(VCTargetsPath)\Platforms\NaCl\ImportAfter\*.props" Condition="Exists('$(VCTargetsPath)\Platforms\NaCl\ImportAfter')" />
+</Project>
