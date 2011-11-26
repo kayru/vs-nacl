@@ -33,12 +33,9 @@
 
     <!-- Default system pathing -->
 
-    <NaClIncludeDir></NaClIncludeDir> <!-- TODO -->
-    <NaClLibDir></NaClLibDir> <!-- TODO -->
-
     <ExecutablePath Condition="'$(ExecutablePath)' == ''">$(GccToolsPath);$(PATH);</ExecutablePath>
-    <IncludePath Condition="'$(IncludePath)' == ''">$(NaClIncludeDir);</IncludePath>
-    <LibraryPath Condition="'$(LibraryPath)' == ''">$(NaClLibDir);</LibraryPath>
+    <IncludePath Condition="'$(IncludePath)' == ''"></IncludePath>
+    <LibraryPath Condition="'$(LibraryPath)' == ''"></LibraryPath>
 
   </PropertyGroup>
   

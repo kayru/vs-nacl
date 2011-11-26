@@ -79,7 +79,7 @@
 
       <GenerateSharedLibrary      Condition="'%(Link.GenerateSharedLibrary)'          == ''">true</GenerateSharedLibrary>
       <NoExecStack                Condition="'%(Link.NoExecStack)'                    == ''">true</NoExecStack>
-      <RPathLink                  Condition="'%(Link.RPathLink)'                      == ''">$(NaClLibDir)</RPathLink>
+      <RPathLink                  Condition="'%(Link.RPathLink)'                      == ''"></RPathLink>
       <SysRootDir                 Condition="'%(Link.SysRootDir)'                     == ''"></SysRootDir> <!-- TODO -->
     
       <SystemLibraryDirectories	  Condition="'%(Link.SystemLibraryDirectories)'       == ''">$(LibraryPath)</SystemLibraryDirectories>
