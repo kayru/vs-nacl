@@ -315,7 +315,7 @@ namespace vs_nacl.Build.CPPTasks.NaCl
                                 {
                                     if (File.Exists(dependentFile) == false)
                                     {
-                                        //Log.LogMessage(MessageImportance.High, "File " + sourcePath + " is missing dependent file: " + dependentFile);
+                                        Log.LogMessage(MessageImportance.High, "File " + sourcePath + " is missing dependent file: " + dependentFile);
                                     }
 
                                     writer.WriteLine(dependentFile);
