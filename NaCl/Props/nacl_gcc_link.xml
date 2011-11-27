@@ -44,22 +44,16 @@
   </BoolProperty>
   <StringListProperty Name="AndroidSystemLibs" DisplayName="Android System Libraries" Category="Input" Switch="l">
   </StringListProperty>
-  <BoolProperty Name="LinkGccLibThumb" DisplayName="Link Against Thumb Version of LibGcc" Category="Input">
-  </BoolProperty>
+
 
   <!-- Advanced -->
-  <StringProperty Name="SoName" DisplayName="'soname' Setting" Category="Advanced" Switch="Wl,-soname,">
-  </StringProperty>
+
   <BoolProperty Name="ReportUndefinedSymbols" DisplayName="Report Undefined Symbols" Category="Advanced" Switch="Wl,--no-undefined">
   </BoolProperty>
 
   <!-- Hidden -->
   <StringListProperty Subtype="folder" Name="SystemLibraryDirectories" Category="General" Visible="false" Switch="L">
   </StringListProperty>
-  <BoolProperty Name="GenerateSharedLibrary" Category="General" Visible="false" Switch="shared">
-  </BoolProperty>
-  <BoolProperty Name="NoExecStack" Category="General" Visible="false" Switch="Wl,-z,noexecstack">
-  </BoolProperty>
   <StringProperty Subtype="folder" Name="RPathLink" Category="General" Visible="false" Switch="Wl,-rpath-link=">
   </StringProperty>
   <StringProperty Subtype="folder" Name="SysRootDir" Category="General" Visible="false" Switch="-sysroot=">

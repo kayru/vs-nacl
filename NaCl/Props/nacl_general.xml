@@ -78,8 +78,8 @@
   </StringProperty>
 
   <EnumProperty Name="PlatformToolset" DisplayName="Platform Toolset" Category="General">
-    <EnumValue Name="win_x86" DisplayName="win_x86" />
     <EnumValue Name="win_x86_newlib" DisplayName="win_x86_newlib" />
+    <EnumValue Name="win_x86" DisplayName="win_x86" />
   </EnumProperty>
 
   <!-- Project Defaults -->

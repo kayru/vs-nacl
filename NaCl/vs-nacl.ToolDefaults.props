@@ -17,27 +17,12 @@
       <PreprocessorDefinitions  Condition="'%(ClCompile.PreprocessorDefinitions)'   == ''"></PreprocessorDefinitions>
       <Warnings                 Condition="'%(ClCompile.Warnings)'                  == ''">NormalWarnings</Warnings>
       <WarningsAsErrors         Condition="'%(ClCompile.WarningsAsErrors)'          == ''">false</WarningsAsErrors>
-      <EchoCommandLines         Condition="'%(ClCompile.EchoCommandLines)'          == ''">false</EchoCommandLines>
-
-      <StrictAliasing           Condition="'%(ClCompile.StrictAliasing)'            == ''">false</StrictAliasing>
-      <UnswitchLoops            Condition="'%(ClCompile.UnswitchLoops)'             == ''">true</UnswitchLoops>
-      <InlineLimit              Condition="'%(ClCompile.InlineLimit)'               == ''">100</InlineLimit>
-      <OmitFramePointer         Condition="'%(ClCompile.OmitFramePointer)'          == ''">true</OmitFramePointer>
-
-      <GccExceptionHandling     Condition="'%(ClCompile.GccExceptionHandling)'      == ''">false</GccExceptionHandling>
-      <SoftFloat                Condition="'%(ClCompile.SoftFloat)'                 == ''">false</SoftFloat>
-      <PositionIndependentCode  Condition="'%(ClCompile.PositionIndependentCode)'   == ''">true</PositionIndependentCode>
-      <StackProtector           Condition="'%(ClCompile.StackProtector)'            == ''">false</StackProtector>
-
-      <RuntimeTypeInfo          Condition="'%(ClCompile.RuntimeTypeInfo)'           == ''">false</RuntimeTypeInfo>
-      <ShortEnums               Condition="'%(ClCompile.ShortEnums)'                == ''">false</ShortEnums>
-
-      <CompileAs                Condition="'%(ClCompile.CompileAs)'                 == ''">Default</CompileAs>
-
-      <IgnoreVaListWarning      Condition="'%(ClCompile.IgnoreVaListWarning)'       == ''">true</IgnoreVaListWarning>
+      <EchoCommandLines         Condition="'%(ClCompile.EchoCommandLines)'          == ''">true</EchoCommandLines>
 	  
-      <SystemIncludeDirectories Condition="'%(ClCompile.SystemIncludeDirectories)'  == ''">$(IncludePath)</SystemIncludeDirectories>
-      <SystemPreprocessorDefinitions Condition="'%(ClCompile.SystemPreprocessorDefinitions)' == ''">$(NaClDefines)</SystemPreprocessorDefinitions>
+      <SystemIncludeDirectories       Condition="'%(ClCompile.SystemIncludeDirectories)'      == ''">$(IncludePath)</SystemIncludeDirectories>
+      <SystemPreprocessorDefinitions  Condition="'%(ClCompile.SystemPreprocessorDefinitions)' == ''">$(NaClDefines)</SystemPreprocessorDefinitions>
+
+      <UserHeaderDependenciesOnly     Condition="'%(ClCompile.UserHeaderDependenciesOnly)' == ''">true</UserHeaderDependenciesOnly>
 
     </ClCompile>
   </ItemDefinitionGroup>
@@ -46,8 +31,8 @@
   <ItemDefinitionGroup Condition="$(Configuration) == 'Debug'">
     <ClCompile>
       
-      <OptimizationLevel        Condition="'%(ClCompile.OptimizationLevel)'         == ''">O0</OptimizationLevel>
-      <GenerateDebugInformation Condition="'%(ClCompile.GenerateDebugInformation)'  == ''">true</GenerateDebugInformation>
+      <!-- <OptimizationLevel        Condition="'%(ClCompile.OptimizationLevel)'         == ''">O0</OptimizationLevel>
+      <GenerateDebugInformation Condition="'%(ClCompile.GenerateDebugInformation)'  == ''">true</GenerateDebugInformation> -->
       
     </ClCompile>
   </ItemDefinitionGroup>
@@ -74,11 +59,8 @@
       <IgnoreAllDefaultLibraries  Condition="'%(Link.IgnoreAllDefaultLibraries)'      == ''">false</IgnoreAllDefaultLibraries>
       <NaClSystemLibs             Condition="'%(Link.NaClSystemLibs)'                 == ''">c;m;log;gcc</NaClSystemLibs>
 
-      <SoName                     Condition="'%(Link.SoName)'                         == ''">lib$(TargetName)</SoName>
       <ReportUndefinedSymbols     Condition="'%(Link.ReportUndefinedSymbols)'         == ''">true</ReportUndefinedSymbols>
 
-      <GenerateSharedLibrary      Condition="'%(Link.GenerateSharedLibrary)'          == ''">true</GenerateSharedLibrary>
-      <NoExecStack                Condition="'%(Link.NoExecStack)'                    == ''">true</NoExecStack>
       <RPathLink                  Condition="'%(Link.RPathLink)'                      == ''"></RPathLink>
       <SysRootDir                 Condition="'%(Link.SysRootDir)'                     == ''"></SysRootDir> <!-- TODO -->
     

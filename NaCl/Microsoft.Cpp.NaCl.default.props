@@ -12,7 +12,7 @@
     <PlatformShortName>NaCl</PlatformShortName>
     <PlatformArchitecture>32</PlatformArchitecture>
     
-    <PlatformToolset    Condition="'$(PlatformToolset)' == ''">win_x86</PlatformToolset>
+    <PlatformToolset    Condition="'$(PlatformToolset)' == ''">win_x86_newlib</PlatformToolset>
     <NaClArch           Condition="'$(NaClArch)'        == ''">i686</NaClArch>
     
     <IntDir Condition="'$(IntDir)'=='' AND '$(IntermediateOutputPath)'!=''">$(IntermediateOutputPath)</IntDir>

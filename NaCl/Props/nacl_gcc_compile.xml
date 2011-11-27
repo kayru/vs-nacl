@@ -51,8 +51,6 @@
     <EnumValue Name="Os" DisplayName="Optimize for size" Switch="Os">
     </EnumValue>
   </EnumProperty>
-  <BoolProperty Name="ThumbMode" DisplayName="Thumb Mode" Category="Optimization" Switch="mthumb" ReverseSwitch="marm">
-  </BoolProperty>
   <BoolProperty Name="StrictAliasing" DisplayName="Strict Aliasing" Category="Optimization" Switch="fstrict-aliasing" ReverseSwitch="fno-strict-aliasing">
   </BoolProperty>
   <BoolProperty Name="UnswitchLoops" DisplayName="Unswitch Loops" Category="Optimization" Switch="funswitch-loops">
@@ -103,13 +101,9 @@
   </StringListProperty>
   <StringListProperty Name="SystemPreprocessorDefinitions" Category="General" Visible="false" Switch="D">
   </StringListProperty>
-  <EnumProperty Name="Architecture" Category="General" Visible="false">
-    <EnumValue Name="armv5te" Switch="march=armv5te -mtune=xscale">
-    </EnumValue>
-    <EnumValue Name="armv7-a" Switch="march=armv7-a -mtune=xscale">
-    </EnumValue>
-  </EnumProperty>
   <BoolProperty Name="IgnoreVaListWarning" Category="General" Visible="false" Switch="Wno-psabi">
+  </BoolProperty>
+  <BoolProperty Name="UserHeaderDependenciesOnly" Category="General" Visible="false" Switch="MMD">
   </BoolProperty>
 
   <!-- Command Line -->
