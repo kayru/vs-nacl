@@ -10,9 +10,9 @@
   <Import Project="$(VCTargetsPath)\Platforms\NaCl\ImportBefore\*.targets" Condition="Exists('$(VCTargetsPath)\Platforms\NaCl\ImportBefore')" />
   <Import Project="$(VCTargetsPath)\Microsoft.CppCommon.targets" />
 
-  <UsingTask TaskName="GCCCompile" AssemblyFile="$(VCTargetsPath)\Platforms\NaCl\vs-android.Build.CppTasks.Android.dll" />
-  <UsingTask TaskName="GCCLink" AssemblyFile="$(VCTargetsPath)\Platforms\NaCl\vs-android.Build.CppTasks.Android.dll" />
-  <UsingTask TaskName="GCCLib" AssemblyFile="$(VCTargetsPath)\Platforms\NaCl\vs-android.Build.CppTasks.Android.dll" />
+  <UsingTask TaskName="GCCCompile" AssemblyFile="$(VCTargetsPath)\Platforms\NaCl\vs-nacl.Build.CPPTasks.NaCl.dll" />
+  <UsingTask TaskName="GCCLink" AssemblyFile="$(VCTargetsPath)\Platforms\NaCl\vs-nacl.Build.CPPTasks.NaCl.dll" />
+  <UsingTask TaskName="GCCLib" AssemblyFile="$(VCTargetsPath)\Platforms\NaCl\vs-nacl.Build.CPPTasks.NaCl.dll" />
   <UsingTask TaskName="VCMessage" AssemblyName="Microsoft.Build.CppTasks.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
 
   <PropertyGroup>
