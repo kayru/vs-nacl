@@ -16,9 +16,6 @@
     <!-- Path to the GCC compilation tools -->
     <GccToolsPath>$(ToolchainDir)\bin</GccToolsPath>
 
-    <!-- Path to the toolchain includes. Needed for Intellisense. -->
-    <GccToolchainIncludes>$(ToolchainDir)\x86_64-nacl\include</GccToolchainIncludes>
-
     <!-- GCC compilation tool filenames -->
     <GccCompiler>$(NaClArch)-nacl-g++.exe</GccCompiler>
     <GccLinker>$(NaClArch)-nacl-g++.exe</GccLinker>

@@ -10,6 +10,8 @@
 
   <PropertyGroup>
 
+    <NaClIncludeDir>$(AndroidApiDir)\arch-$(PlatformShortName)\usr\include</NaClIncludeDir>
+
     <!-- Tool paths -->
         
     <VCInstallDir>$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\10.0\Setup\VC@ProductDir)</VCInstallDir>
@@ -34,7 +36,7 @@
     <!-- Default system pathing -->
 
     <ExecutablePath Condition="'$(ExecutablePath)' == ''">$(GccToolsPath);$(PATH);</ExecutablePath>
-    <IncludePath Condition="'$(IncludePath)' == ''"></IncludePath>
+    <IncludePath Condition="'$(IncludePath)' == ''">$(ToolchainDir)\x86_64-nacl\include; $(ToolchainDir)\x86_64-nacl\include\c++\4.4.3</IncludePath>
     <LibraryPath Condition="'$(LibraryPath)' == ''"></LibraryPath>
 
   </PropertyGroup>
