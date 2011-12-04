@@ -7,11 +7,6 @@
     <NaClSDKRoot Condition="'$(NaClSDKRoot)' == ''">$(NACL_SDK_ROOT)</NaClSDKRoot>
     <NaClSDKRoot Condition="'$(NaClSDKRoot)' == ''">&lt;unset&gt;</NaClSDKRoot>
 
-    <!-- NaCl Target Platform -->    
-
-    <NaClTargetPlatform Condition="'$(NaClTargetPlatform)' == ''">$(NACL_TARGET_PLATFORM)</NaClTargetPlatform>
-    <NaClTargetPlatform Condition="'$(NaClTargetPlatform)' == ''">&lt;unset&gt;</NaClTargetPlatform> <!-- Maybe this should default to 'pepper_15'? -->
-
   </PropertyGroup>
 
 </Project>

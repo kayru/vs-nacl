@@ -98,6 +98,13 @@
     <EnumValue Name="x86_64" DisplayName="x86 64-bit" />
   </EnumProperty>
 
+  <EnumProperty Name="NaClTargetPlatform" DisplayName="Target Platform" Category="ProjectDefaults">
+    <EnumValue Name="pepper_14" DisplayName="pepper_14" />
+    <EnumValue Name="pepper_15" DisplayName="pepper_15" />
+    <EnumValue Name="pepper_16" DisplayName="pepper_16" />
+    <EnumValue Name="pepper_17" DisplayName="pepper_17" />
+  </EnumProperty>
+
   <!-- Hidden -->
   <EnumProperty Name="CLRSupport" DisplayName="Common Language Runtime Support"
                 Description="Specifies whether this configuration supports the Common Language Runtime. This is incompatible with some other settings, e.g. runtime checks. See help for /clr family of C++ compiler switches for full list of conflicts."

@@ -8,5 +8,6 @@ It is basically a hacked version of [vs-android](http://code.google.com/p/vs-and
 How to install
 ==============
 
-Copy 'NaCl' directory to 'C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Platforms'.
+* Copy 'NaCl' directory to 'C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Platforms'.
+* Set 'NACL_SDK_ROOT' environment variable to point to NaCl SDK location.
 
